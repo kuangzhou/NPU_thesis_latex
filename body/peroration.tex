@@ -1,0 +1,20 @@
+% 若xelatex编译非UTF8文件，需在每个文件中指定字符编码;
+% main.tex中手动制定了\atemp和\usewhat参数；
+\ifx\atempxetex\usewhat
+\XeTeXinputencoding "gbk"
+\fi
+
+
+\defaultfont
+\backmatter %结束章节自动编号 页码不加的问题
+\BiAppendixChapter{结~~束~~语}{peroration}
+%\addcontentsline{toc}{chapter}{结~~束~~语}
+
+%% 不带章节号的页眉直接显示标题
+\fancyhead[RO]{\song \xiaowu\leftmark}
+\fancyhead[LO]{\song \xiaowu\universityname \cxuewei 学位论文}
+\fancyhead[CE]{\song \xiaowu \universityname\cxuewei 学位论文 }
+结束语
+
+
+\end{enumerate}

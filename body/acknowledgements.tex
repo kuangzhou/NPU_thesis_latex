@@ -1,0 +1,14 @@
+% 若xelatex编译非UTF8文件，需在每个文件中指定字符编码;
+% main.tex中手动制定了\atemp和\usewhat参数；
+\ifx\atempxetex\usewhat
+\XeTeXinputencoding "gbk"
+\fi
+\defaultfont
+
+\BiAppendixChapter{致~~~~谢}{Acknowledgements}
+\addtocounter{page}{-1}
+%\thispagestyle{myheadings}
+\fancyhead[R]{\song \xiaowu\leftmark}
+\fancyhead[L]{\song \xiaowu\universityname \cxuewei 学位论文}
+\fancyhead[C]{}
+致谢

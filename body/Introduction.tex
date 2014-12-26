@@ -1,0 +1,37 @@
+% 若xelatex编译非UTF8文件，需在每个文件中指定字符编码;
+% main.tex中手动制定了\atemp和\usewhat参数；
+\ifx\atempxetex\usewhat
+\XeTeXinputencoding "gbk"
+\fi
+\defaultfont
+
+\BiChapter{绪论}{Introduction}
+\label{Introduction}
+  \fancyhead[RO]{\song \xiaowu\chaptername}
+  \fancyhead[LO]{\song \xiaowu\universityname \cxuewei 学位论文}
+  %\fancyhead[CE]{\song \xiaowu \universityname\cxueke\cxuewei 学位论文 }%
+  % 偶数页页眉的中间
+  \fancyhead[CE]{\song \xiaowu \universityname\cxuewei 学位论文 }%不带理学工学
+  \fancyhead[LE]{}
+  \fancyhead[RE]{}
+\section{研究背景与意义}
+西北工业大学硕博毕业论文Latex模板
+
+
+\section{研究内容与结构安排}
+如何引用参考文献:
+
+用编号引用~\cite{dave2002robust}.
+
+上标引用~\citeup{dave2002robust}
+
+插入图片
+ \begin{center}
+\begin{figure}[!thbt]
+	\includegraphics[width=0.6\linewidth]{./pic/fig1.pdf}
+    \caption{题目.}
+\end{figure}
+\end{center}
+
+
+

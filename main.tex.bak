@@ -1,0 +1,164 @@
+ % -*- coding:gb2312 -*-
+% 当main.tex文件中存在上面声明编码的命令时，用winedt5.4打开该文件时会winedt中所有的
+% 编译按钮都是灰色的，tex文档中的注释、latex命令等的颜色高亮显示也不正常，感觉是winedt没有识别出
+% tex文件一样，当将其删除时，一切都正常了。<这是winedt编辑器的bug，非模板bug>
+%  ======== 推荐winedt用户使用winedt5.5及以上版本或删除该命令。==========
+
+\def\usewhat{pdflatex}    % 你喜欢哪种编译方式，pdflatex dvipdfmx dvipspdf xelatex yap
+
+%若用xelatex编译，默认用UTF8编码，非UTF8文件时，需在每个文件中指定字符编码;
+%本段无需改动，需放在输入中文之前；
+\def\atempxetex{xelatex}\ifx\atempxetex\usewhat
+\XeTeXinputencoding "gbk"
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 博士论文
+%\def \xuewei {Doctor}   % 定义学位 博士
+%\def\oneortwoside{twoside} %定义单双面打印，只对硕士学位论文有效；
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 硕士论文
+\def \xuewei {Master}    % 硕士
+\def\oneortwoside{twoside} % 硕士单面打印
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{setup/type.tex}      % 硕博类型
+
+%下面的book选项中可以使用 draft 选项，使插入的图形只显示外框，以加快预览速度。
+\documentclass[12pt,a4paper,openany,\oneortwoside]{book}
+
+\input{setup/package.tex} % 引用的宏包
+
+% 论文包含的内容
+
+\includeonly{
+                setup/Cover,
+                body/Introduction,
+                body/publications,
+                body/acknowledgements,
+                body/Authorization
+            }
+%\graphicspath{{body/figures/}} %定义所有的eps文件在 figures 子目录下
+%\graphicspath{{setup/}} %定义所有的eps文件在 figures 子目录下
+
+\begin{document}
+
+
+\ifx\atempxetex\usewhat\else
+\begin{CJK*}{GBK}{song}
+\fi
+
+\input{setup/userdef}       % 用户定义文件
+\input{setup/Definition} % 文本格式定义
+\input{setup/format}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 正文部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+\sloppy % 解决中英文混排的断行问题，会加入间距，但不会影响断行
+%\input{setup/cover} % 封面
+\includepdfmerge{cover.pdf,1,2,3}
+\includepdfmerge{empty.pdf,1}
+\input{body/c_abstract}
+\includepdfmerge{empty.pdf,1}
+\input{body/e_abstract}
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+\includepdfmerge{empty.pdf,1}
+\addtocounter{page}{-2}
+%这里由于默认目录右开的问题会增加两个空白页，最后还要删除一个。
+%% 中英目录
+\renewcommand{\baselinestretch}{1}
+\fontsize{12pt}{12pt}\selectfont
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\pdfbookmark[0]{目~~~~录}{mulu}
+\tableofcontents    % 中文目录
+%\iffalse
+\ifxueweidoctor     % 英文目录右开
+  \clearpage{\pagestyle{empty}\cleardoublepage}
+\else%
+  \ifoneortwoside\clearpage{\pagestyle{empty}\cleardoublepage}\fi
+\fi
+%\fi
+\renewcommand{\baselinestretch}{1.3}
+\fontsize{12pt}{12pt}\selectfont
+\ifxueweidoctor %硕士学位论文没有英文目录
+  \tableofengcontents % 英文目录
+\fi
+
+%\input{setup/figtab.tex}  %图表索引, 如果不需要图表索引，注释掉这一句即可；
+% \notation  %主要符号表
+\addtocontents{toc}{\protect\vskip1\baselineskip} % 中文目录增加空行
+\addtocontents{toe}{\protect\vskip1\baselineskip} % 英文目录增加空行
+
+%\iffalse
+\ifxueweidoctor
+  \clearpage{\pagestyle{empty}\cleardoublepage}   % 清除目录后面空页的页眉和页脚
+\else%
+  \ifoneortwoside\clearpage{\pagestyle{empty}\cleardoublepage}\fi  % 清除目录后面空页的页眉和页脚
+\fi                                               %  第一章是否右开
+%\fi
+\mainmatter
+\defaultfont % 对应于小四的标准字号为12pt, 可以在正文中用此命令修改所需要字体的大小
+\input{body/Introduction}
+\input{body/section2}
+%\input{body/section3}
+\input{body/section4}
+%\input{body/section5_new}
+\input{body/section6_new_2}
+\input{body/peroration}
+\includepdfmerge{empty.pdf,1}
+\addtocounter{page}{-1}
+%参考文献
+\backmatter  %结束章节自动编号 页码不加的问题
+
+
+\defaultfont
+\ifx\atempxetex\usewhat
+\bibliographystyle{chinesebst2005_GBK}
+\else
+\bibliographystyle{chinesebst2005_GBK}
+
+\fancyhead[RE]{\song \xiaowu\leftmark}
+\fancyhead[LE]{\song \xiaowu\universityname \cxuewei 学位论文}
+\fancyhead[CE]{}
+\fancyhead[CO]{\song \xiaowu \universityname\cxuewei 学位论文 }
+\fancyhead[RO]{}
+\fancyhead[LO]{}
+
+\addcontentsline{toc}{chapter}{\hei \ReferenceCName}      % 参考文献加入到中文目录
+\addcontentsline{toe}{chapter}{\bfseries \xiaosi \ReferenceEName} % 参考文献加入到英文目录
+\addtolength{\bibsep}{-0.8 em} %\nocite{*} %notice will list all the reference even it is not used
+\bibliography{body/reference}
+\includepdfmerge{empty.pdf,1}
+\addtocounter{page}{-1}
+% appendix
+\include{body/publications}  % 所发文章
+
+%接入不带页眉页脚的空白页
+\includepdfmerge{empty.pdf,1}
+%\addtocounter{page}{-1}
+\include{body/acknowledgements} % 致谢
+
+\includepdfmerge{empty.pdf,1}
+\include{body/Authorization}   % 承诺
+%\addtocontents{fen}{\protect\vskip1\baselineskip}
+%\addtocontents{ten}{\protect\vskip1\baselineskip}
+%英文图形和表格索引里加入空白行，通常放在 \include{appendix/appA}% 附录A之前。
+%区分开正文和附录的图形和表格，一般没有这个必要。
+
+
+\clearpage
+\ifx\atempxetex\usewhat\else
+\end{CJK*}
+\fi
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+
+%%% End:

@@ -1,0 +1,36 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   LaTeX File for phd thesis of npu University
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\chapter*{ Abstract\markboth{英\ \ 文\ \ 摘\ \ 要}{英\ \ 文\ \ 摘\ \ 要}}
+\chapter*{ Abstract\markboth{Abstract}{Abstract}}
+\addtocounter{page}{-1}
+%\addcontentsline{toc}{chapter}{Abstract} %不出现在目录中
+\fancyhead[R]{\song \xiaowu\leftmark}
+\fancyhead[L]{\song \xiaowu\universityname \cxuewei 学位论文}
+\fancyhead[C]{}
+
+Rayleigh distribution is of great importance in reliability project, which has been widely applied in medical science, communication engineering and aero-space. In this paper, parameter and reliability estimations of components with Rayleigh distribution are studied. Three problems are considered: the parameter estimations of the generalized Rayleigh distribution under progressively
+hybrid censoring scheme, the implementation of accelerated life test in the progressively hybrid censored Rayleigh distribution data, the reliability evaluation of progressively censored mixed-Rayleigh distribution data using Evidential-EM (E2M) algorithm. %
+Main contents are listed as follows:
+
+\begin{enumerate}
+\item Under progressively Type-I hybrid and adaptive Type-II progressively hybrid  censoring scheme, the problem of estimating the generalized Rayleigh distribution parameters is discussed. The maximum likelihood estimators (MLE) of the scale and shape parameters are derived using EM algorithm. Bayes estimates of the unknown parameters are obtained using the important sampling. Monte-Carlo simulations are then performed to illustrate the proposed methods.
+\item
+   The Geometric Process implementation of the constant stress accelerated life test model based on the progressive Type-I hybrid censored data is considered. By assuming that the life variables under increasing stress levels form a Geometric Process, the likelihood functions are derived and then reduced to a single nonlinear equation which can  be solved numerically to obtain the maximum likelihood estimates  of the parameters. Two bootstrap confidence intervals are proposed. The point and interval estimations for the component's reliability are also obtained. Finally, the Monte-Carlo simulation study is carried out to illustrate the proposed procedures.
+\item
+ An extension of the E2M method is presented in a particular case of
+incomplete data, where the loss of information is due both to mixture
+models and censored observations. The belief functions are considered to
+represent the prior uncertain information, the pseudo-likelihood function is derived based on the censored observations and the prior knowledge, and then E2M method is invoked to maximize the generalized
+likelihood function. Numerical examples show that the proposed method
+could integrate the uncertain prior information with the current one
+conveyed by the observed data effectively.
+\end{enumerate}
+
+
+\vspace{1 cm}
+
+\noindent {\bf Key words:} Progressively hybrid censored, MLE, EM algorithm, Belief function theory, Reliability evaluation

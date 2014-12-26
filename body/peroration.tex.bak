@@ -1,0 +1,40 @@
+% 若xelatex编译非UTF8文件，需在每个文件中指定字符编码;
+% main.tex中手动制定了\atemp和\usewhat参数；
+\ifx\atempxetex\usewhat
+\XeTeXinputencoding "gbk"
+\fi
+
+
+\defaultfont
+\backmatter %结束章节自动编号 页码不加的问题
+\BiAppendixChapter{结~~束~~语}{peroration}
+%\addcontentsline{toc}{chapter}{结~~束~~语}
+
+%% 不带章节号的页眉直接显示标题
+\fancyhead[RO]{\song \xiaowu\leftmark}
+\fancyhead[LO]{\song \xiaowu\universityname \cxuewei 学位论文}
+\fancyhead[CE]{\song \xiaowu \universityname\cxuewei 学位论文 }
+本文针对Rayleigh分布寿命数据，讨论了逐步混合截尾试验下广义Rayleigh分布%
+的参数估计，$k$个应力恒加试验下Rayliegh分布的可靠性评估，混合Rayleigh分布的%
+参数估计和可靠性评估等问题。%
+
+在研究过程中，个人感觉还有以下方面需要进一步研究。
+
+\begin{enumerate}
+
+\item 将逐步混合截尾和自适应逐步混合截尾试验运用于多个应力下的步加、序加寿命试验时，%
+在多个应力条件下，由于涉及到混合截尾，这就造成了试验观测样本的多种情况。%
+对这多种情况分别进行讨论是不现实的。这就需要考虑如何用一个统一的模型来表达。
+
+\item  逐步混合截尾试验应用于系统级的可靠性评估的工作还较少。这一方面还有待进一步研究。
+
+
+\item 可靠性评估中还有多种形式的不确定信息，尤其是在系统级的可靠性评估中。如失效模式的依存%
+关系，失效状态的模糊性等。如何有效地表达和处理这些不确定信息也是需要研究的问题。
+
+\item D-S证据理论在统计推断方面的广泛应用需要更强的理论保证。D-S的框架是放宽了的概率框架，这就%
+使得利用其得到的估计结果不具有大样本的性质。那么，在何种意义下去评估D-S估计量的优良性质是需要考虑的%
+问题。
+
+
+\end{enumerate}

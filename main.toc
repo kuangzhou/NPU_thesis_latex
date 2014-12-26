@@ -1,0 +1,18 @@
+\ttl@change@i {\@ne }{chapter}{3.92em}{\vspace {0.5em}\hspace {-3.92em}\hei \bf \boldmath }{\contentslabel {0em}}{\hspace *{-0em}}{\normalfont \titlerule *[5pt]{.}\contentspage }\relax 
+\ttl@change@v {chapter}{}{}{}\relax 
+\ttl@change@i {\@ne }{section}{1.16cm}{}{\contentslabel {1.8em}}{\hspace *{-1.8em}}{\titlerule *[5pt]{.}\contentspage }\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\ttl@change@i {\@ne }{subsection}{2.00cm}{}{\contentslabel {2.7em}}{\hspace *{-2.7em}}{\titlerule *[5pt]{.}\contentspage }\relax 
+\ttl@change@v {subsection}{}{}{}\relax 
+\ttl@change@i {\@ne }{subsubsection}{2.86cm}{}{\contentslabel {3.4em}}{\hspace *{-3.4em}}{\titlerule *[5pt]{.}\contentspage }\relax 
+\ttl@change@v {subsubsection}{}{}{}\relax 
+\vskip 1\baselineskip 
+\contentsline {chapter}{第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces {1}\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.8em}绪论}{1}{section*.4}
+\contentsline {section}{\numberline {1.1}研究背景与意义}{1}{section*.6}
+\contentsline {section}{\numberline {1.2}研究内容与结构安排}{1}{section*.7}
+\contentsline {chapter}{第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces {2}\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 章\hspace {0.8em}第二章题目}{2}{section*.9}
+\contentsline {section}{\numberline {2.1}引言}{2}{section*.11}
+\contentsline {chapter}{\CJKfamily {hei}参考文献}{3}{section*.12}
+\contentsline {chapter}{\CJKfamily {hei}硕(博)士期间完成论文及参加科研项目情况}{4}{section*.16}
+\contentsline {chapter}{\CJKfamily {hei}致\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 谢}{5}{section*.20}
+\contentsfinish 

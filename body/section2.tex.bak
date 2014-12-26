@@ -1,0 +1,11 @@
+% 若xelatex编译非UTF8文件，需在每个文件中指定字符编码;
+% main.tex中手动制定了\atemp和\usewhat参数；
+\ifx\atempxetex\usewhat
+\XeTeXinputencoding "gbk"
+\fi
+\defaultfont
+
+\BiChapter{逐步混合截尾寿命试验下广义Rayleigh分布的统计分析}{PHC}
+\label{PHC}
+\section{引言}
+第二章。。。

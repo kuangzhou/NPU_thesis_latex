@@ -1,0 +1,49 @@
+% 若xelatex编译非UTF8文件，需在每个文件中指定字符编码;
+% main.tex中手动制定了\atemp和\usewhat参数；
+\ifx\atempxetex\usewhat
+\XeTeXinputencoding "gbk"
+\fi
+\defaultfont
+\BiAppendixChapter{硕士期间完成论文及参加科研项目情况} {Papers
+Published in the Period of PH. D. Education}
+
+\fancyhead[R]{\song \xiaowu\leftmark}
+\fancyhead[L]{\song \xiaowu\universityname \cxuewei 学位论文}
+\fancyhead[C]{}
+% 书写格式与参考文献相同，这里手写吧 :-)
+% 参见...\Accessories\ThesisCriterion\参考文献国标GB7714-2005.pdf内规定
+\noindent 一、已发表(投稿)的学术论文：
+
+\begin{publist}
+\item[1.]{{\bf Kuang Zhou}, Yi-min Shi, Tian-yu Sun.
+{Reliability Analysis for Accelerated Life-Test with
+Progressive Hybrid Censored Data Using Geometric
+Process}, Journal of Physical Sciences, 2012,16:133-143.}
+\item[2.]{{\bf Kuang Zhou}, Jiang-hong Ma.
+{A new Bayesian reliability assessment scheme based on D-S evidence theory},
+ the 2$_{nd}$ International Conference on
+Information Science and Engineering, 2010:29-32. (EI)}
+\item[3.]{{\bf 周旷} ,师义民.
+{一种改进的证据组合规则在可靠性评估中的应用},
+ 火力与指挥控制, 2012, 37(11): 191-194.}
+\item[4.]{{\bf 周旷}, 师义民, 马丽娜.
+{基于证据理论的航天产品的非参数可靠性评估方法
+},
+航天控制.(已录用)}
+\item[5.]{程高,刘永健, {\bf 周旷},刘世忠.
+{基于遗传算法的BP神经网络在桥梁安全评估中的应用
+}, 世界桥梁, 2012, 40(005): 83-86.}
+\item[6.]{马丽娜,肖华勇, {\bf 周旷}.
+{多源验前信息下基于证据理论的ML-II融合方法
+},
+火力与指挥控制.(已录用)}
+
+\end{publist}
+
+\noindent
+ 二、参加的科研项目
+
+
+
+
+

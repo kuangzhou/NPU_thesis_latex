@@ -1,0 +1,53 @@
+% 若xelatex编译非UTF8文件，需在每个文件中指定字符编码;
+% main.tex中手动制定了\atemp和\usewhat参数；
+\ifx\atempxetex\usewhat
+\XeTeXinputencoding "gbk"
+\fi
+
+
+\ctitle{\chinesethesistitle}
+\cdegree{\universityname\\ \vspace*{0.2cm} \cxueke\cxuewei}
+\csubject{\subjectname}
+\caffil{\departmentname} %（在校生填所在系名称，同等学力人员填工作单位）
+\cauthor{\authorname}
+\csupervisor{\advisorname}  %导师名字
+\ccosupervisor{\coadvisorname} %(~如无联合培养导师则不列此项~)
+\cdegreek{\cxueke\cxuewei}
+\cdate{\chinesethesistime}
+
+\etitle{\englishthesistitle}
+\edegree{\exuewei \ of \exuekenew}
+\esubject{\engsubjectname}  %英文二级学科名
+\eaffil{\engdepartmentname} %英文单位 %换行用\newline，不要用\\
+\eauthor{\engauthorname}                   %作者姓名 （英文）
+\esupervisor{\engadvisorname}       % 导师姓名 （英文）
+\ecosupervisor{\engcoadvisorname}
+%\eassosupervisor{Professor Y}
+\edate{\englishthesistime}
+
+\natclassifiedindex{\classifiedindex}  %国内图书分类号
+%\internatclassifiedindex{\internationalclassifiedindex}  %国际图书分类号
+\statesecrets{\classification}  %秘密
+
+\iffalse
+\BiAppendixChapter{摘~~~~要}{}  %使用winedt编辑时文档结构图（toc）中为了显示摘要，故增加此句；
+\fi
+\cabstract{
+中文摘要
+
+}
+
+\ckeywords{关键字； }
+
+\eabstract{
+abstract
+}
+
+\ekeywords{Key words;}
+
+\NotationList{\begin{tabular}{ll} %主要符号表
+%A & a matrix\\
+%B &  登高\\
+\end{tabular}}
+\makecover
+\clearpage

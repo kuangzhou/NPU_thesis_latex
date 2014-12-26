@@ -1,0 +1,52 @@
+% 若xelatex编译非UTF8文件，需在每个文件中指定字符编码;
+% main.tex中手动制定了\atemp和\usewhat参数；
+\ifx\atempxetex\usewhat
+\XeTeXinputencoding "gbk"
+\fi
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 公式中斜粗体i定义
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\g{\boldsymbol{g}}  % gravitational acceleration vector
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 文章宏定义文字
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\chineseq}{公式}
+
+\def\version{1.9.2.20090424}         % 该变量仅用于模板文件的版本号控制，新的论文规范从1.9开始；
+%\def\xueke{Engineering} % 定义学科 工学
+\def\xueke{Science}      % 理学
+%\def\xueke{Management}   % 管理学
+%\def\xueke{Arts}         % 艺术学
+
+
+%\newcommand{\universitylogo}{hit_logo}          %校徽
+\newcommand{\universityname}{西北工业大学}      %学校
+\newcommand{\enguniversityname}{Northwestern Polytechnical University}      %学校(英文)
+\newcommand{\universitycode}{10699}             %代码
+\newcommand{\classification}{公开}              %密级
+
+
+\newcommand{\titlename}{\universityname博士学位论文}  % \\换行           %标题，%封面用论文标题，自己可手动断行
+\newcommand{\subjectname}{X~~X~~X~~X~~X}         %(~按二级学科填写~)
+
+\newcommand{\departmentname}{X~~X~~学~~院}        %（在校生填所在系名称，同等学力人员填工作单位）
+\newcommand{\authorname}{X~~X~~X}            %作者
+\newcommand{\advisorname}{X~~~~~~~~X~~教~~授}
+\newcommand{\coadvisorname}{X~~~~~~~~X~~教~~授}
+\newcommand{\engsubjectname}{***}             %英文二级学科名
+\newcommand{\engdepartmentname}{College of ***}     %英文单位 %换行用\newline，不要用\\
+\newcommand{\engauthorname}{***}          %作者（英文）
+\newcommand{\engadvisorname}{Prof. ***}         % 导师姓名 （英文）
+\newcommand{\engcoadvisorname}{Prof. ***}         % 导师姓名 （英文）
+\newcommand{\classifiedindex}{****}             %国内图书分类号
+\newcommand{\internationalclassifiedindex}{***}     %国际图书分类号
+
+
+\newcommand{\chinesethesistitle}{标题} %授权书用，无需断行
+\newcommand{\englishthesistitle}{English title}
+\newcommand{\chinesethesistime}{2009~年~12~月}  %封面底部的日期中文形式
+\newcommand{\englishthesistime}{December, 2009}    %封面底部的日期英文形式 
